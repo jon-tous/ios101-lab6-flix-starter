@@ -5,6 +5,7 @@
 //  Created by Jon Toussaint on 3/20/24.
 //
 
+import Nuke
 import UIKit
 
 class DetailViewController: UIViewController {
@@ -47,7 +48,28 @@ class DetailViewController: UIViewController {
         } else {
             releaseDateLabel.text = ""
         }
+        
+        // MARK: - Configure the image views
 
+        // Unwrap the optional poster path
+        if let posterPath = movie.posterPath,
+
+        // Create a url by appending the poster path to the base url. https://developers.themoviedb.org/3/getting-started/images
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500" + posterPath) {
+
+            // Use the Nuke library's load image function to (async) fetch and load the image from the image url.
+            Nuke.loadImage(with: imageUrl, into: posterImageView)
+        }
+
+        // Unwrap the optional backdrop path
+        if let backdropPath = movie.backdropPath,
+
+        // Create a url by appending the backdrop path to the base url. https://developers.themoviedb.org/3/getting-started/images
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500" + backdropPath) {
+
+            // Use the Nuke library's load image function to (async) fetch and load the image from the image url.
+            Nuke.loadImage(with: imageUrl, into: backdropImageView)
+        }
     }
     
 
