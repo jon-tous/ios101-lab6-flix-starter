@@ -58,6 +58,14 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     // Property to store fetched movies array
     private var movies: [Movie] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndexPath, animated: animated)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +74,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
 
         fetchMovies()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

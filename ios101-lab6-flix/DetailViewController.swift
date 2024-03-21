@@ -70,6 +70,9 @@ class DetailViewController: UIViewController {
             // Use the Nuke library's load image function to (async) fetch and load the image from the image url.
             Nuke.loadImage(with: imageUrl, into: backdropImageView)
         }
+        
+        // MARK: - Prevent large titles
+        navigationItem.largeTitleDisplayMode = .never
     }
     
 
