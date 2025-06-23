@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		ED83EE9A29B05FCE007A4FC9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83EE9929B05FCE007A4FC9 /* Movie.swift */; };
-		ED83EE9D29B06A4C007A4FC9 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = ED83EE9C29B06A4C007A4FC9 /* Nuke */; };
 		ED83EEA129B71218007A4FC9 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83EEA029B71218007A4FC9 /* MovieCell.swift */; };
 		ED88ABF229AD9858008A6FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88ABF129AD9858008A6FF6 /* AppDelegate.swift */; };
 		ED88ABF429AD9858008A6FF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88ABF329AD9858008A6FF6 /* SceneDelegate.swift */; };
@@ -16,6 +15,10 @@
 		ED88ABF929AD9858008A6FF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED88ABF729AD9858008A6FF6 /* Main.storyboard */; };
 		ED88ABFB29AD9859008A6FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED88ABFA29AD9859008A6FF6 /* Assets.xcassets */; };
 		ED88ABFE29AD9859008A6FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED88ABFC29AD9859008A6FF6 /* LaunchScreen.storyboard */; };
+		EDDD50542DC4176600B71C96 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = EDDD50532DC4176600B71C96 /* Nuke */; };
+		EDDD50562DC4176600B71C96 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EDDD50552DC4176600B71C96 /* NukeExtensions */; };
+		EDDD50582DC4176600B71C96 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = EDDD50572DC4176600B71C96 /* NukeUI */; };
+		EDDD505A2DC4176600B71C96 /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = EDDD50592DC4176600B71C96 /* NukeVideo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED83EE9D29B06A4C007A4FC9 /* Nuke in Frameworks */,
+				EDDD50582DC4176600B71C96 /* NukeUI in Frameworks */,
+				EDDD50542DC4176600B71C96 /* Nuke in Frameworks */,
+				EDDD50562DC4176600B71C96 /* NukeExtensions in Frameworks */,
+				EDDD505A2DC4176600B71C96 /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +98,10 @@
 			);
 			name = "ios101-lab6-flix";
 			packageProductDependencies = (
-				ED83EE9C29B06A4C007A4FC9 /* Nuke */,
+				EDDD50532DC4176600B71C96 /* Nuke */,
+				EDDD50552DC4176600B71C96 /* NukeExtensions */,
+				EDDD50572DC4176600B71C96 /* NukeUI */,
+				EDDD50592DC4176600B71C96 /* NukeVideo */,
 			);
 			productName = "ios101-lab5-flix1";
 			productReference = ED88ABEE29AD9858008A6FF6 /* ios101-lab6-flix.app */;
@@ -123,7 +132,7 @@
 			);
 			mainGroup = ED88ABE529AD9858008A6FF6;
 			packageReferences = (
-				ED83EE9B29B06A4C007A4FC9 /* XCRemoteSwiftPackageReference "Nuke" */,
+				EDDD50522DC4176600B71C96 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = ED88ABEF29AD9858008A6FF6 /* Products */;
 			projectDirPath = "";
@@ -374,21 +383,36 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ED83EE9B29B06A4C007A4FC9 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+		EDDD50522DC4176600B71C96 /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				minimumVersion = 12.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ED83EE9C29B06A4C007A4FC9 /* Nuke */ = {
+		EDDD50532DC4176600B71C96 /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED83EE9B29B06A4C007A4FC9 /* XCRemoteSwiftPackageReference "Nuke" */;
+			package = EDDD50522DC4176600B71C96 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		EDDD50552DC4176600B71C96 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDDD50522DC4176600B71C96 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		EDDD50572DC4176600B71C96 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDDD50522DC4176600B71C96 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		EDDD50592DC4176600B71C96 /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDDD50522DC4176600B71C96 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
